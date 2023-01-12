@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #4e8b37, #c9f52b);
+}
+
+.clock{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d7f371 url(clock-face.png);
+    background-size: cover;
+    border-radius: 30%;
+    border: 20px solid #d7f372;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.1),
+    0 20px 20px rgba(0,0,0,0.2), 0 0 0 5px rgb(200, 230, 121,1);
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #848480;
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+
+.hour, .minute, .seconds{
+    position: absolute;
+}
+
+.hour, .hr{
+    width: 150px;
+    height: 150px;
+}
+
+.minute, .mn{
+    width: 180px;
+    height: 180px; 
+}
+
+.seconds, .sc{
+    width: 210px;
+    height: 210px;
+}
+
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.nametag span{
+    float: left;
+    margin-top: 450px;
+    margin-left: -340px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 70px;
+    background: #848480;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+}
+
+.mn::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background: #cfcfca;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+}
+
+.sc::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #e97a30;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
